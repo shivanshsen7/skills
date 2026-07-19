@@ -37,14 +37,10 @@ image-gen or rephrase skill is installed by name. Instead, at the start of a run
 - If an image-generation skill exists, use it for the banner/logo — don't tell the user to go
   generate one manually elsewhere unless nothing is available.
 - If a rephrase/voice-check skill exists, run the drafted bio/copy through it as a second
-  opinion before shipping — but treat its output as a second opinion, not a pasteable final
-  (same rule as this codebase's own `grok-rephrase` skill: evaluate line by line, don't paste
-  raw).
+  opinion before shipping — but treat its output as a second opinion, not a pasteable final.
 - If nothing relevant is installed, say so plainly and offer to draft prompts/copy for the
   user to run through whatever web tool they have, rather than silently skipping the step.
-- If a vector-tracing tool (`potrace`) isn't installed and the banner mark may double as a
-  favicon/logo, offer to install it (via the system package manager) rather than shipping a
-  raster-only asset that will pixelate at small sizes.
+
 
 ## 2. Vet anything before presenting it as "their own work"
 
@@ -65,7 +61,7 @@ or project in something public-facing:
   constraints (outside-work clauses, employer approval requirements) before publishing
   anything new publicly. If such a constraint exists, surface it and get explicit
   confirmation rather than silently proceeding — this is genuinely their call, not a default.
-- When multiple candidate items exist (e.g. a folder of skills to showcase), present the
+- When multiple candidate items exist (e.g. a folder of skills, projects, certifications to showcase), present the
   vetting result as a clear include/exclude list with the reason for each exclusion, and let
   the user confirm the final set rather than deciding unilaterally.
 
