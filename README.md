@@ -1,8 +1,8 @@
-# claude-code-skills
+# Skills
 
-A curated set of custom [Claude Code](https://claude.com/claude-code) skills. Built for real use in day-to-day work — content generation, drafting tools, and repo/profile automation — not as demos.
+A curated set of reusable AI-agent skills. Built for real use in day-to-day work — content generation, drafting tools, and repo/profile automation — not as demos.
 
-Each skill is a self-contained directory with a `SKILL.md` (frontmatter + instructions Claude reads to decide when and how to use it) and, where needed, supporting scripts. Drop a directory into `.claude/skills/` (project-level) or `~/.claude/skills/` (user-level) to install it.
+Each skill is a self-contained directory with a `SKILL.md` (frontmatter + instructions an agent reads to decide when and how to use it) and, where needed, supporting scripts. Written in the [Claude Code](https://claude.com/claude-code) skill format; drop a directory into `.claude/skills/` (project-level) or `~/.claude/skills/` (user-level) to install it there. A few of these also declare compatibility with other agent platforms (Cursor, Codex, Gemini CLI) in their frontmatter — check each skill's own metadata.
 
 ## Skills
 
