@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TITLE — LinkedIn Carousel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #A82E4B;
+      --primary-bright: #E04466;
+      --secondary: #6B5B95;
+      --bg: #FAFAF8;
+      --text: #2F2F31;
+      --text-muted: #6B6B6F;
+      --accent-light: #F4E8EB;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #E8E8E6;
+      font-family: 'DM Sans', sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .slide {
+      width: 1080px;
+      height: 1080px;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 56px;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      flex-shrink: 0;
+    }
+    .slide.dark {
+      background: var(--text);
+      color: var(--bg);
+    }
+    .slide-number {
+      position: absolute;
+      bottom: 32px;
+      right: 48px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      color: var(--text-muted);
+    }
+    .slide.dark .slide-number { color: #CCCCD0; }
+    .watermark {
+      position: absolute;
+      bottom: 32px;
+      left: 48px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .slide.dark .watermark { color: #CCCCD0; }
+    h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: 1.1; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .accent { color: var(--primary); }
+    .slide.dark .accent { color: var(--primary-bright); }
+
+    @media (max-width: 1120px) {
+      .slide { width: 100vw; height: 100vw; padding: 4.4vw 5.2vw; }
+    }
+    @media print {
+      body { padding: 0; gap: 0; background: white; }
+      .slide { width: 1080px; height: 1080px; page-break-after: always; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1: HOOK -->
+  <div class="slide">
+    <!-- Content here -->
+    <span class="slide-number">1 / N</span>
+    <span class="watermark">shivanshsen.com</span>
+    <span style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--text-muted);">swipe &rarr;</span>
+  </div>
+
+  <!-- SLIDE N: CTA -->
+  <div class="slide" style="text-align:center;align-items:center;">
+    <!-- CTA content -->
+    <span class="slide-number">N / N</span>
+    <span class="watermark">shivanshsen.com</span>
+  </div>
+
+</body>
+</html>
